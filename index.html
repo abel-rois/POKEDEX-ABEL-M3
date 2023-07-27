@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <img src="./img/logo_menu.png" alt="Botón de navegación" aria-label="Botón de navegación" class="custom-navbar-toggler-icon" width="205" height="118">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  <a class="nav-link active d-none d-lg-block" href="#"><img src="./img/logo_pokedex.png" alt="LOGO POKEDEX" width="160" height="60"></a>
+                  <a class="nav-link active" href="#">Videojuegos</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+<main class="d-flex justify-content-center mt-4">
+    <section>
+        <form class="d-flex" role="search" onsubmit="searchPokemon(event)">
+            <input class="form-control me-2 mx-auto" id="barra-busqueda" type="search" placeholder="Busca tu Pokémon" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+    </section>    
+
+    <section id="poke-card">
+            <div id="poke-name">
+
+            </div>
+
+            <div id="poke-img-container">
+                <img src="./img/" alt="" id="poke-img">
+            </div>
+
+            <div id="poke-number">
+
+            </div>
+            <div id="poke-type">
+
+            </div>
+            <div id="poke-stats">
+
+            </div>
+    </section>
+</main>
+
+<footer class="bg-light text-center text-lg-start">
+        <div class="text-center text-light p-4" style="background-color: black;">
+          © 2023 Derechos Reservados:
+          <a class="text-light" href="https://github.com/abel-rois">abel_rois</a>
+        </div>
+        <!-- Copyright -->
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
