@@ -1,4 +1,4 @@
-const pokeApi = "https://pokeapi.co/api/v2/ability/"
+const pokeApi = "https://pokeapi.co/api/v2/pokemon/";
 const buttonSearch = document.querySelector("#search");
 const pokeCard = document.querySelector("#poke-card");
 const pokeName = document.querySelector("#poke-name");
@@ -11,6 +11,26 @@ const pokeStats = document.querySelector("#poke-stats");
 buttonSearch.addEventListener("click", insertPokemon);
 
 function insertPokemon(event) {
-event.preventDefault();
-console.log("Holi");  
+    event.preventDefault();
+    window.fetch(`${pokeApi}${pokeName.value.toLowerCase()}`)
+    .then(response => {
+        if (response.status === 404) {
+            alert("Este Pokemón no está disponible, intenta de nuevo")
+        } else {
+            return response.json()
+        }
+    })
+    .then(responseJSON => {
+
+        // const allItems = []
+
+        const result = []
+
+        for (let pokemonInfo in responseJSON) {
+            result.push([pokemonInfo , responseJSON[pokemonInfo]])           
+        }
+        console.log(result);
+    })
+
+
 }
