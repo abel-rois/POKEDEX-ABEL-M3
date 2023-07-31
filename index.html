@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
               <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- <span class="navbar-toggler-icon"></span> -->
+
                 <img src="./img/logo_menu.png" alt="Botón de navegación" aria-label="Botón de navegación" class="custom-navbar-toggler-icon" width="100" height="100">
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -26,34 +26,28 @@
             </div>
           </nav>
     </header>
-<main class="d-flex justify-content-center mt-4">
-    <section>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2 mx-auto" id="barra-busqueda" type="search" placeholder="Busca tu Pokémon" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit" id="search">Buscar</button>
+
+    <main class="d-flex flex-column align-items-center mt-4">
+      <section class="d-flex flex-column justify-content-center align-items-center">
+          <form class="d-flex" role="search">
+              <input class="form-control me-2 mx-auto" id="barra-busqueda" type="search" placeholder="Busca tu Pokémon" aria-label="Buscar">
+              <button class="btn btn-outline-success" type="submit" id="search">Buscar</button>
           </form>
-    </section>    
-
-    <section id="poke-card">
-            <div id="poke-name">
-
-            </div>
-
-            <div id="poke-img-container">
-                <img src="./img/" alt="" id="poke-img">
-            </div>
-
-            <div id="poke-number">
-
-            </div>
-            <div id="poke-type">
-
-            </div>
-            <div id="poke-stats">
-
-            </div>
-    </section>
-</main>
+      </section>    
+  
+      <section id="poke-card" class="mt-4">
+          <h2 id="poke-name"></h2>
+          <div id="poke-img-container">
+              <img src="" alt="" id="poke-img">
+          </div>
+          <p id="poke-number"></p>
+          <p id="poke-type"></p>
+          <p id="title-stats"></p>
+          <ul id="poke-stats"></ul>
+      </section>
+  </main>
+  
+  
 
 <footer class="bg-light text-center text-lg-start">
         <div class="text-center text-light p-4" style="background-color: black;">
