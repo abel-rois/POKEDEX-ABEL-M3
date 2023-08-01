@@ -27,7 +27,6 @@ function insertPokemon(event) {
     .then(responseJSON => {
         clearPokemonData();
         pokeName.textContent = responseJSON.name;
-        console.log(responseJSON.moves);
         pokeImg.src = responseJSON.sprites.front_default;
         pokeNumber.innerHTML = `<strong>Número:</strong> ${responseJSON.id}`;
         pokeType.innerHTML = `<strong>Tipo:</strong> ${responseJSON.types.map(type => type.type.name).join(", ")}`;
@@ -46,9 +45,10 @@ function insertPokemon(event) {
 function clearPokemonData() {
   pokeName.textContent = "";
   pokeImg.src = "";
-  pokeNumber.textContent = "";
-  pokeType.textContent = "";
+  pokeNumber.innerHTML = "";
+  pokeType.innerHTML = "";
   pokeStats.innerHTML = "";
+  titleStats.innerHTML = "";
 }
 
 
